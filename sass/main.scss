@@ -1,0 +1,147 @@
+// font-family: 'Outfit', sans-serif;
+@import './colors';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: $VeryDarkBlueMainBG;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 327px;
+    height: 543px;
+    background-color: $VeryDarkBlueCardBG;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    padding: 24px;
+    &__shadow{
+        .icon{
+            position: absolute;
+            z-index: 41232;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+            display: none;
+            cursor: pointer;
+
+        }
+        .main{
+            background-color: $Cyan;
+            width: 278px;
+            height: 278px;
+            border-radius: 8px;
+           img{
+            width: 278px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .2s;
+            opacity: 1;
+            &:hover{
+                opacity: .5;
+            }
+           }
+        }
+        &:hover>img{
+            display: block;
+        }
+    }
+    &__title{
+        font-weight: 600;
+font-size: 22px;
+color: #ffffff;
+align-self: flex-start;
+padding-top: 24px;
+cursor: pointer;
+transition: color .2s;
+&:hover{
+    color: $Cyan;
+}
+    }
+    &__text{
+        font-weight: 300;
+font-size: 18px;
+color: $SoftBlue;
+text-align: left;
+line-height: 26px;
+margin-top: 12px;
+    }
+    &__price{
+        margin-top: 16px;
+        display: flex;
+        font-size: 15px;
+        width: 100%;
+        justify-content: space-between;
+        .price{
+            color: $Cyan;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 19px;
+        }
+        .time{
+            font-weight: 400;
+             font-size: 15px;
+            color: $SoftBlue; 
+            margin: auto 0;
+
+        }
+        .eth{
+            width: 11px;
+            height: 18px;
+            vertical-align: middle;
+
+        }
+        .clock{
+            width: 16px;
+            vertical-align: middle;
+            margin-bottom: 3px;
+
+        }
+    }
+    &__line{
+        flex-shrink: 0;
+        width: 278px;
+        height: 1px;
+        background-color: #2E405A;
+        margin-top: 16px;
+    }
+    .footer{
+        display: flex;
+        margin-top: 16px;
+        align-self: flex-start;
+        .avatar{
+            width: 33px;
+           border: 1px solid white;
+           border-radius: 50%;
+           margin-right: 16px;
+        }
+        &__name{
+            align-self: center;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: $SoftBlue;
+            cursor: pointer;
+            span{
+                color: white;
+                transition: color .2s;
+                &:hover{
+                    color: $Cyan;
+                }
+            }
+        }
+    }
+}
+@import './desktop';
